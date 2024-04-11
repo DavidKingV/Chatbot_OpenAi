@@ -26,7 +26,7 @@ const employeesAddonConfig = {
   const employeesAddon = init(employeesAddonConfig);
   
   const flowStaff = addKeyword(EVENTS.ACTION).addAnswer(
-    ["Ahi te va compa!"],
+    ["¡Listo!"],
     null,
     async (_, { flowDynamic, state }) => {
       console.log("🙉 texto a voz....");
@@ -39,7 +39,7 @@ const employeesAddonConfig = {
   
   const flowVoiceNote = addKeyword(EVENTS.VOICE_NOTE).addAction(
     async (ctx, ctxFn) => {
-      await ctxFn.flowDynamic("¡Quihúbole raza, estoy escuchando tu mensaje de voz! 🎙️");
+      await ctxFn.flowDynamic("¡Dame un momento, para escucharte! 🎙️");
       console.log("🤖 voz a texto....");
       const text = await handlerAI(ctx);
       console.log(`🤖 Fin voz a texto....[TEXT]: ${text}`);
