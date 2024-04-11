@@ -1,7 +1,7 @@
 class OpenAiClass {
     openAiOptions = { model: '', temperature: 0, apiKey: '' }
 
-    constructor(_options = { model: 'gpt-3.5-turbo', temperature: 0, apiKey: process.env.OPENAI_API_KEY }) {
+    constructor(_options = { model: 'gpt-3.5-turbo', temperature: 0, apiKey: '' }) {
         if (!_options?.apiKey) {
             throw new Error('apiKey no pude ser vacio')
         }
